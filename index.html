@@ -166,8 +166,10 @@
             `);
 
             localVideo = document.getElementById("local-video2");
-            localVideo.play()
-            localVideo.volume = .3
+            setTimeout(() => {
+                localVideo.play()
+                localVideo.volume = .3
+            }, 1000);
             localVideo.onloadedmetadata = function () {
                 $('#progress-bar').attr('max', localVideo.duration);
                 $('#duration').text(formatTime(localVideo.duration));
