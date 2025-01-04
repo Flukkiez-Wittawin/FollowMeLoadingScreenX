@@ -47,8 +47,8 @@
         </div>
 
         <div class="flex flex-col flex-grow space-y-0.5">
-            <span id="song-title" class="text-white text-md">Santa doesn’t know you like i do</span>
-            <span id="song-description" class="text-gray-400 text-sm">PUN - santa doesn’t know you like i do</span>
+            <span id="song-title" class="text-white text-md">Mr. Lonely - 4BANG</span>
+            <span id="song-description" class="text-gray-400 text-sm">Mr. Lonely - 4BANG</span>
             <input type="range" id="progress-bar" value="0" step="0.01"
                 class="progress-bar h-1 bg-white bg-opacity-20 rounded appearance-none">
         </div>
@@ -63,70 +63,10 @@
             class="volume-bar w-20 h-1 bg-white bg-opacity-20 rounded appearance-none hidden">
     </div>
 
-    <!-- Horizontal Menu -->
-    <!-- <div
-        class="absolute top-0 left-0 mt-4 ml-4 text-white rounded-lg p-2 flex w-auto bg-black bg-opacity-50 border border-black border-opacity-20">
-        <a href="#" data-content="news-content"
-            class="menu-item px-7 py-2 text-sm font-medium text-gray-400 hover:text-white rounded">News</a>
-        <a href="#" data-content="rules-content"
-            class="menu-item px-7 py-2 text-sm font-medium text-gray-400 hover:text-white rounded">Rules</a>
-        <a href="#" data-content="updates-content"
-            class="menu-item px-7 py-2 text-sm font-medium text-gray-400 hover:text-white rounded">Updates</a>
-        <a href="#" data-content="team-content"
-            class="menu-item px-7 py-2 text-sm font-medium text-gray-400 hover:text-white rounded">Team</a>
-        <button id="close-content"
-            class="ml-3 px-3 py-1 bg-red-500 hover:bg-red-1000 text-gray-400 hover:text-white font-bold rounded hidden">X</button>
-    </div> -->
-
     <!-- Content Boxes -->
     <div id="news-content"
         class="content-box hidden mt-8 p-4 bg-black bg-opacity-50 border border-black border-opacity-20 rounded-lg absolute top-5 left-0 ml-4 w-auto h-2/4 overflow-y-auto">
         <p class="text-white">NEWS</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="./img/test.jpg" alt="Placeholder Image" class="rounded">
-        </div>
-        <!--
-        <p class="text-white mt-4">This is more News content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="https://via.placeholder.com/364x205" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is even more News content.</p> -->
-    </div>
-    <div id="rules-content"
-        class="content-box hidden mt-8 p-4 bg-black bg-opacity-50 border border-black border-opacity-20 rounded-lg absolute top-5 left-0 ml-4 w-auto h-2/4 overflow-y-auto">
-        <p class="text-white">This is the Rules content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="./img/test.jpg" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is more Rules content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="https://via.placeholder.com/364x205" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is even more Rules content.</p>
-    </div>
-    <div id="updates-content"
-        class="content-box hidden mt-8 p-4 bg-black bg-opacity-50 border border-black border-opacity-20 rounded-lg absolute top-5 left-0 ml-4 w-auto h-2/4 overflow-y-auto">
-        <p class="text-white">This is the Updates content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="./img/test.jpg" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is more Updates content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="https://via.placeholder.com/364x205" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is even more Updates content.</p>
-    </div>
-    <div id="team-content"
-        class="content-box hidden mt-8 p-4 bg-black bg-opacity-50 border border-black border-opacity-20 rounded-lg absolute top-5 left-0 ml-4 w-auto h-2/4 overflow-y-auto">
-        <p class="text-white">This is the Team content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="./img/test.jpg" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is more Team content.</p>
-        <div class="flex justify-center items-center mt-4">
-            <img src="https://via.placeholder.com/364x205" alt="Placeholder Image" class="rounded">
-        </div>
-        <p class="text-white mt-4">This is even more Team content.</p>
     </div>
 
     <script>
@@ -144,10 +84,8 @@
             });
 
             var config = {
-
-                localVideoURL: "./mp4/Clip.mp4",
-                songTitle: "Santa doesn’t know you like i do",
-                songDescription: "PUN - santa doesn’t know you like i do"
+                songTitle: "Mr. Lonely - 4BANG",
+                songDescription: "Mr. Lonely - 4BANG"
             };
 
             $('#song-title').text(config.songTitle);
@@ -155,7 +93,7 @@
 
             const VIDEO_ID = `J6tkR6tU6EI`
             $('#video-background').html(`
-            <audio id="local-video2" onload="showAlert()" src="./mp4/music.mp3" autoplay loop></audio>
+                <audio id="local-video2" src="./mp4/music.mp3" autoplay loop></audio>
                 <iframe id="local-video" 
                     src="https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&loop=1&playlist=${VIDEO_ID}&mute=1&controls=0" 
                     class="w-screen h-screen" 
@@ -163,14 +101,10 @@
                     allow="autoplay; encrypted-media" 
                     allowfullscreen>
                 </iframe>
-                
             `);
 
-            localVideo = document.getElementById("local-video2");
-            setTimeout(() => {
-                localVideo.play()
-                localVideo.volume = .3
-            }, 1000);
+            var localVideo = document.getElementById("local-video2");
+
             localVideo.onloadedmetadata = function () {
                 $('#progress-bar').attr('max', localVideo.duration);
                 $('#duration').text(formatTime(localVideo.duration));
@@ -178,7 +112,7 @@
 
             $('#play-pause').on('click', function () {
                 if (localVideo.paused) {
-                    localVideo.play()
+                    localVideo.play();
                     $(this).html("<i class='fas fa-pause'></i>");
                 } else {
                     localVideo.pause();
@@ -225,27 +159,18 @@
             }
 
             setInterval(updateProgressBar, 900);
-
-            $('.menu-item').on('click', function (event) {
-                event.preventDefault();
-                var contentId = $(this).data('content');
-                $('.content-box').hide();
-                $('#' + contentId).css('margin-top', 'calc(2vh + ' + $('.menu-item').outerHeight() + 'px)').fadeIn();
-                $('#close-content').fadeIn();
-                $('.menu-item').removeClass('bg-black bg-opacity-50 text-white');
-                $(this).addClass('bg-black bg-opacity-50 text-white');
-            });
-
-            $('#close-content').on('click', function () {
-                $('.content-box').fadeOut();
-                $(this).fadeOut();
-                $('.menu-item').removeClass('bg-black bg-opacity-50 text-white');
-            });
         });
-        function showAlert() {
-            localVideo.play()
-            localVideo.volume = .3
+
+        function AutoPlay() {
+            const localVideo = document.getElementById("local-video2");
+            localVideo.volume = 0.3; // ตั้งค่าระดับเสียง
+            localVideo.play().catch(error => {
+                console.log("Autoplay failed:", error);
+            });
         }
+
+        // เรียกฟังก์ชัน AutoPlay เมื่อหน้าโหลด
+        document.addEventListener('DOMContentLoaded', AutoPlay);
     </script>
 </body>
 
