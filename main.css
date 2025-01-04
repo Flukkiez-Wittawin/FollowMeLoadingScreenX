@@ -1,0 +1,73 @@
+:root {
+    --main: linear-gradient(130deg, rgb(0, 204, 255) 0%, rgb(0, 102, 255) 100%);
+    --main-sc: rgb(0, 204, 255);
+}
+* {
+    font-family: "Kanit", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.content-box::-webkit-scrollbar {
+    display: none;
+}
+
+.progress-bar::-webkit-slider-thumb,
+.volume-bar::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    background: var(--main);
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.progress-bar::-moz-range-thumb,
+.volume-bar::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: var(--main);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-bar::-ms-thumb,
+.progress-bar::-ms-thumb {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type='range'] {
+    overflow: hidden;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    box-shadow: -80px 0 0 80px var( --main-sc);
+}
+.jello-horizontal {
+  animation: jello-horizontal 1.5s both infinite alternate;
+ }
+@keyframes jello-horizontal {
+0% {
+    transform: translateY(2px);
+}
+100% {
+    transform: translateY(-10px);
+}
+}
+.Fivem-progress{
+    position: absolute;
+
+    width: 300px;height: 20px;
+    background-color: rgba(0,0,0,.5);
+}
