@@ -166,6 +166,7 @@
             `);
 
             localVideo = document.getElementById("local-video2");
+            localVideo.play()
             localVideo.volume = .3
             localVideo.onloadedmetadata = function () {
                 $('#progress-bar').attr('max', localVideo.duration);
@@ -174,7 +175,7 @@
 
             $('#play-pause').on('click', function () {
                 if (localVideo.paused) {
-                    localVideo.play();
+                    localVideo.play()
                     $(this).html("<i class='fas fa-pause'></i>");
                 } else {
                     localVideo.pause();
